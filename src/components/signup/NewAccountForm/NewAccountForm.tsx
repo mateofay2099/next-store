@@ -8,7 +8,10 @@ export const NewAccountForm = () => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: {
+    target: any;
+    preventDefault: () => void;
+  }) => {
     event.preventDefault();
     try {
       setLoading(true);

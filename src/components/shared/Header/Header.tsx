@@ -24,7 +24,7 @@ export const Header = async () => {
       </nav>
       <div className={styles.Header__user}>
         {customer?.firstName ? (
-          <p>Hello {customer.firstName}!</p>
+          <Link href="/my-account">Hello {customer.firstName}!</Link>
         ) : (
           <Link href="/login">Login</Link>
         )}
